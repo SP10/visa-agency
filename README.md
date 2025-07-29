@@ -1,5 +1,7 @@
 # visa-agency
 
+# install http server
+npm install -g http-server
+
 # start
-npm install -g http-server (once)
 http-server .

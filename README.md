@@ -1,6 +1,6 @@
 # visa-agency
 # developed by K//O team
-# install browwser sync
+# install browser sync
 npm install -g browser-sync
 
 # start

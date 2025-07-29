@@ -1,7 +1,7 @@
 # visa-agency
-
-# install http server
-npm install -g http-server
+# developed by K//O team
+# install browwser sync
+npm install -g browser-sync
 
 # start
-http-server .
+npm run watch

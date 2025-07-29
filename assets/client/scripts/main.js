@@ -6,11 +6,17 @@ import InputMaskCollection from './InputMask.js'
 import SelectCollection from './Select.js'
 import defineScrollBarWidthCSSVar from './utils/defineScrollBarWidthCSSVar.js'
 
-new Header()
-new TabsCollection()
-new VideoPlayerCollection()
-new ExpandableContentCollection()
-new InputMaskCollection()
-new SelectCollection()
+document.addEventListener("DOMContentLoaded", async () => {
 
-defineScrollBarWidthCSSVar()
+    setTimeout(() => {
+        new Header()
+        new TabsCollection()
+        new VideoPlayerCollection()
+        new ExpandableContentCollection()
+        new InputMaskCollection()
+        new SelectCollection()
+
+        defineScrollBarWidthCSSVar()
+    }, 1000); // Delay to ensure all elements are loaded
+
+});

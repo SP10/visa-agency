@@ -93,3 +93,98 @@
     border-radius: 50%;
   }
 }
+
+// Базові класи
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+// Laptop (width > 1440.98)
+.d-laptop-none {
+  @include laptop-above {
+    display: none !important;
+  }
+}
+.d-laptop-block {
+  @include laptop-above {
+    display: block !important;
+  }
+}
+.d-laptop-inline {
+  @include laptop-above {
+    display: inline !important;
+  }
+}
+.d-laptop-inline-block {
+  @include laptop-above {
+    display: inline-block !important;
+  }
+}
+
+// Tablet (width <= 1023.98)
+.d-tablet-none {
+  @include tablet {
+    display: none !important;
+  }
+}
+.d-tablet-block {
+  @include tablet {
+    display: block !important;
+  }
+}
+.d-tablet-inline {
+  @include tablet {
+    display: inline !important;
+  }
+}
+.d-tablet-inline-block {
+  @include tablet {
+    display: inline-block !important;
+  }
+}
+
+// Mobile (width <= 767.98)
+.d-mobile-none {
+  @include mobile {
+    display: none !important;
+  }
+}
+.d-mobile-block {
+  @include mobile {
+    display: block !important;
+  }
+}
+.d-mobile-inline {
+  @include mobile {
+    display: inline !important;
+  }
+}
+.d-mobile-inline-block {
+  @include mobile {
+    display: inline-block !important;
+  }
+}
+
+// Mobile-s (width <= 375.98)
+.d-mobile-s-none {
+  @include mobile-s {
+    display: none !important;
+  }
+}
+.d-mobile-s-block {
+  @include mobile-s {
+    display: block !important;
+  }
+}

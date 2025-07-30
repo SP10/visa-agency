@@ -1,0 +1,11 @@
+.icon-button {
+    &.m-unstyled {
+        color: inherit;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        background: none;
+        border: none;
+        padding: 0;
+    }
+}

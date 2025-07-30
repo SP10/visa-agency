@@ -1,11 +1,20 @@
 @use '../helpers' as *;
 
 .logo {
-  &:hover {
-    .icon {
-      transform: scale(1.2);
-      transform-origin: center;
-      transition: transform 0.3s ease;
-    }
+  display: flex;
+  column-gap: 10px;
+  position: relative;
+
+  &__icon {
+    transition: transform 0.3s ease;
+    transform-origin: center;
+  }
+
+  &__text {
+      pointer-events: none !important;
+  }
+
+  &:hover &__icon {
+    transform: scale(1.2);
   }
 }

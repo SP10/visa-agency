@@ -1,15 +1,9 @@
 @use "../helpers" as *;
 
-// .burger-button {
-//   display: inline-flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   padding: rem(8.5) rem(4.25);
-//   color: var(--text-primary);
-//   background-color: transparent;
-//   border: none;
-
-//   @include hover {
-//     color: var(--color-accent);
-//   }
-// }
+.burger-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 6px !important;
+}

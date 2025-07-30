@@ -2,21 +2,124 @@
   <div class="header__body">
     <div class="header__body-inner container">
       <a class="header__logo logo" href="/" aria-label="Home" title="Home">
-        <svg width="212" height="36">
-          <use xlink:href="#logotext" />
-        </svg>
+        <img class="d-block logo__icon" src="/assets/static/images/logo.svg" alt="Viza Work Agency logo">
+        <img class="d-none d-laptop-block logo__text" src="/assets/static/images/text.svg" alt="Viza Work Agency text logo">
       </a>
       <div class="header__overlay" data-js-header-overlay>
-        <nav class="header__menu">
+        <nav class="header__menu d-tablet-none">
           <ul class="header__menu-list">
             <li class="header__menu-item">
-              <a class="header__menu-link is-active" href="/index.html">Home</a>
+              <a class="header__menu-link active" href="/index.html">Home</a>
             </li>
             <li class="header__menu-item">
               <a class="header__menu-link" href="/services.html">Services</a>
             </li>
             <li class="header__menu-item">
-              <a class="header__menu-link" href="#">Opened work</a>
+              <a class="header__menu-link dropdown__toggle" href="#">Opened work
+                <svg class="icon" width="22" height="22">
+                  <use xlink:href="#chevron_down" />
+                </svg>
+              </a>
+              <div class="dropdown">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="/opened-work/all.html">
+                      <svg width="24" height="24">
+                        <use xlink:href="#earth" />
+                      </svg>
+                      All countries
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="/opened-work/germany.html">
+                      <svg width="24" height="24">
+                        <use xlink:href="#germany" />
+                      </svg>
+                      Germany
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="/opened-work/kyrgyzstan.html">
+                      <svg width="24" height="24">
+                        <use xlink:href="#kyrgyzstan" />
+                      </svg>
+                      Kyrgyzstan
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="/opened-work/serbia.html">
+                      <svg width="24" height="24">
+                        <use xlink:href="#serbia" />
+                      </svg>
+                      Serbia
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="/opened-work/poland.html">
+                      <svg width="24" height="24">
+                        <use xlink:href="#poland" />
+                      </svg>
+                      Poland
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="/opened-work/turkey.html">
+                      <svg width="24" height="24">
+                        <use xlink:href="#turkey" />
+                      </svg>
+                      Turkey
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="/opened-work/hungary.html">
+                      <svg width="24" height="24">
+                        <use xlink:href="#hungary" />
+                      </svg>
+                      Hungary
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="/opened-work/czech-republic.html">
+                      <svg width="24" height="24">
+                        <use xlink:href="#czech_republic" />
+                      </svg>
+                      Czech Republic
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="/opened-work/ukraine-lviv.html">
+                      <svg width="24" height="24">
+                        <use xlink:href="#ukraine" />
+                      </svg>
+                      Ukraine (Lviv)
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="/opened-work/lithuania.html">
+                      <svg width="24" height="24">
+                        <use xlink:href="#lithuania" />
+                      </svg>
+                      Lithuania
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="/opened-work/portugal.html">
+                      <svg width="24" height="24">
+                        <use xlink:href="#portugal" />
+                      </svg>
+                      Portugal
+                    </a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="/opened-work/slovakia.html">
+                      <svg width="24" height="24">
+                        <use xlink:href="#slovakia" />
+                      </svg>
+                      Slovakia
+                    </a>
+                  </li>
+                </ul>                  
+              </div>
             </li>
             <li class="header__menu-item">
               <a class="header__menu-link" href="/about.html">About us</a>
@@ -32,33 +135,35 @@
             </li>
           </ul>
         </nav>
-        <div class="socials">
+      </div>
+      <div class="header__buttons">
+        <div class="socials d-none d-laptop-block">
           <ul class="socials__list">
             <li class="socials__item">
               <a class="socials__link" href="/" target="_blank" aria-label="TikTok" title="TikTok">
                 <svg width="20" height="20">
-                  <use href="#tiktok" />
+                  <use xlink:href="#tiktok" />
                 </svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link" href="/" target="_blank" aria-label="Facebook" title="Facebook">
                 <svg width="20" height="20">
-                  <use href="#facebook" />
+                  <use xlink:href="#facebook" />
                 </svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link" href="/" target="_blank" aria-label="LinkedIn" title="LinkedIn">
                 <svg width="20" height="20">
-                  <use href="#linkedin" />
+                  <use xlink:href="#linkedin" />
                 </svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link" href="/" target="_blank" aria-label="Instagram" title="Instagram">
                 <svg width="20" height="20">
-                  <use href="#instagram" />
+                  <use xlink:href="#instagram" />
                 </svg>
               </a>
             </li>
@@ -67,19 +172,13 @@
         <button class="button button-secondary m-small" href="#">
           Contact us
         </button>
+        <button class="burger-button icon-button m-unstyled d-block d-laptop-none" type="button" aria-label="Open menu"
+          title="Open menu" data-js-header-burger-button>
+          <svg width="28" height="28">
+            <use xlink:href="#hamburger" />
+          </svg>
+        </button>
       </div>
-      <div data-js-header-burger-button>
-        <svg width="28" height="28">
-          <use xlink:href="#burger" />
-        </svg>
-      </div>
-      <!-- <button
-        class="header__burger-button burger-button visible-mobile"
-        type="button"
-        aria-label="Open menu"
-        title="Open menu"
-        data-js-header-burger-button
-      ></button> -->
     </div>
   </div>
 </header>

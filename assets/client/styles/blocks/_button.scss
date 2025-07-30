@@ -6,13 +6,16 @@
   padding: 12px 20px;
   font-size: 18px;
   border-radius: var(--border-radius-btn);
+
   &-primary {
     font-weight: 600;
     background-color: var(--bg-btn-primary);
     border: 1px solid var(--border-btn-primary);
+
     @include hover {
       border: 1px solid var(--border-btn-primary-hover);
     }
+
     &:active {
       border: 1px solid var(--border-btn-primary-active);
     }
@@ -21,13 +24,16 @@
   &-secondary {
     background-color: var(--bg-btn-secondary);
     border: 1px solid var(--border-btn-secondary);
+
     @include hover {
       border: 1px solid var(--border-btn-secondary-hover);
     }
+
     &:active {
       border: 1px solid var(--border-btn-secondary-active);
     }
   }
+
   &.m-small {
     font-size: 16px;
     font-weight: 700;

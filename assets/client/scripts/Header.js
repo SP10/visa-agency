@@ -6,7 +6,7 @@ class Header {
   }
 
   stateClasses = {
-    isActive: 'is-active',
+    isActive: 'active',
     isLock: 'is-lock',
   }
 

@@ -355,6 +355,8 @@ svg * {
   --border-btn-secondary: rgba(36, 36, 42, 0.2);
   --border-btn-secondary-hover: rgba(36, 36, 42, 0.4);
   --border-btn-secondary-active: rgba(36, 36, 42, 0.7);
+  --color-icon: #3F3F59;
+  --color-icon-hover: #24242A;
   --shadow: 0 0 0 0.1875rem #191919;
   --container-width: 1440px;
   --container-padding-x: 56px;
@@ -606,6 +608,23 @@ button[aria-label]::before {
   content: "";
 }
 
+.c-svg {
+  position: relative;
+}
+.c-svg.m-disabled object {
+  pointer-events: none;
+}
+.c-svg.m-banner .c-svg__image {
+  z-index: 1;
+  width: 100%;
+}
+.c-svg .c-svg__link {
+  text-decoration: none;
+}
+.c-svg .c-svg__content-image img {
+  width: 100%;
+}
+
 .expandable-content {
   --initialMaxHeight: 31.25rem;
   position: relative;
@@ -667,8 +686,10 @@ button[aria-label]::before {
   background-image: url("../../icons/arrow-down_gray.svg");
 }
 
-.logo {
-  max-width: clamp(7.875rem, 6.8073347107rem + 4.3801652893vw, 11.1875rem);
+.logo:hover .icon {
+  transform: scale(1.2);
+  transform-origin: center;
+  transition: transform 0.3s ease;
 }
 
 .button {

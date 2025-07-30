@@ -15,12 +15,6 @@
   --color-accent: #ffd11a;
   --color-red: #ff5500;
 
-  // --gradient: linear-gradient(
-  //   45deg,
-  //   var(--color-dark-15) 64%,
-  //   var(--color-accent) 136%
-  // );
-
   --font-family-base: "Urbanist", sans-serif;
   --font-family-accent: "Urbanist", sans-serif;
 
@@ -34,15 +28,16 @@
   --border-btn-primary: #cd9600;
   --border-btn-primary-hover: #a47e00;
   --border-btn-primary-active: #aa8300;
-
   --border-radius-btn: 30px;
   --border-btn: 1px solid #cd9600;
-
   --text-color-btn-secondary: #24242a;
   --bg-btn-secondary: #fff;
   --border-btn-secondary: rgba(36, 36, 42, 0.2);
   --border-btn-secondary-hover: rgba(36, 36, 42, 0.4);
   --border-btn-secondary-active: rgba(36, 36, 42, 0.7);
+
+  --color-icon: #3F3F59;
+  --color-icon-hover: #24242A;
 
   --shadow: 0 0 0 #{rem(3)} #191919;
 

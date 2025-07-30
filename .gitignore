@@ -20,3 +20,6 @@ build/
 # Екземпляри середовища
 .env
 .env.local
+
+assets/client/styles/main.css
+assets/client/styles/main.css.map

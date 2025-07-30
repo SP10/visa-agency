@@ -1,5 +1,11 @@
 @use '../helpers' as *;
 
 .logo {
-  max-width: fluid(179, 126);
+  &:hover {
+    .icon {
+      transform: scale(1.2);
+      transform-origin: center;
+      transition: transform 0.3s ease;
+    }
+  }
 }

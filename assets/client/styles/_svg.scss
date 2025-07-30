@@ -1,0 +1,26 @@
+.c-svg {
+    position: relative;
+
+    &.m-disabled {
+        object {
+            pointer-events: none;
+        }
+    }
+
+    &.m-banner {
+        .c-svg__image {
+            z-index: 1; // stylelint-disable-line
+            width: 100%;
+        }
+    }
+
+    .c-svg__link {
+        text-decoration: none;
+    }
+    
+    .c-svg__content-image {
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -355,8 +355,10 @@ svg * {
   --border-btn-secondary: rgba(36, 36, 42, 0.2);
   --border-btn-secondary-hover: rgba(36, 36, 42, 0.4);
   --border-btn-secondary-active: rgba(36, 36, 42, 0.7);
-  --color-icon: #3F3F59;
-  --color-icon-hover: #24242A;
+  --color-icon: #24242A;
+  --color-icon-hover: #3F3F59;
+  --color-icon-secondary: #655D4F;
+  --color-icon-secondary-hover: #7e7e81;
   --shadow: 0 0 0 0.1875rem #191919;
   --container-width: 1440px;
   --container-padding-x: 56px;
@@ -853,66 +855,45 @@ button[aria-label]::before {
   }
 }
 
-.soc1als--3-cols {
-  width: 100%;
-  max-width: 19.25rem;
-}
-.soc1als--3-cols .soc1als__list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  row-gap: 0.625rem;
-}
-@media (width <= 1440.98px) {
-  .soc1als--3-cols .soc1als__list {
-    column-gap: 0.625rem;
-  }
-}
-.soc1als--3-cols .soc1als__link {
+.socials__list {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 3.75rem;
-  background-color: var(--color-dark-10);
-  border: var(--border);
-  border-radius: 0.375rem;
+  column-gap: 8px;
 }
-@media (width <= 1440.98px) {
-  .soc1als--3-cols .soc1als__link {
-    height: 3rem;
+@media (width <= 375.98px) {
+  .socials__list {
+    column-gap: 16px;
   }
+}
+.socials__item {
+  display: flex;
+  padding: 6px;
+}
+.socials__link {
+  color: var(--color-icon);
 }
 @media (any-hover: hover) {
-  .soc1als--3-cols .soc1als__link:hover {
-    border-color: var(--color-accent);
+  .socials__link:hover {
+    color: var(--color-icon-hover);
+    transform: scale(1.05);
   }
 }
 @media (any-hover: none) {
-  .soc1als--3-cols .soc1als__link:active {
-    border-color: var(--color-accent);
+  .socials__link:active {
+    color: var(--color-icon-hover);
+    transform: scale(1.05);
   }
 }
-.soc1als__list {
-  display: flex;
-  column-gap: 1.25rem;
+.socials__link.m-secondary {
+  color: var(--color-icon-secondary);
 }
-@media (width <= 1440.98px) {
-  .soc1als__list {
-    column-gap: 0.875rem;
+@media (any-hover: hover) {
+  .socials__link.m-secondary:hover {
+    color: var(--color-icon-secondary-hover);
   }
 }
-.soc1als__item {
-  display: flex;
-}
-.soc1als__link {
-  --size: 1.5rem;
-  width: var(--size);
-  height: var(--size);
-  color: var(--color-light);
-}
-@media (width <= 1440.98px) {
-  .soc1als__link {
-    --size: 1.25rem;
+@media (any-hover: none) {
+  .socials__link.m-secondary:active {
+    color: var(--color-icon-secondary-hover);
   }
 }
 

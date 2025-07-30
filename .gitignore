@@ -21,5 +21,5 @@ build/
 .env
 .env.local
 
-assets/client/styles/main.css
-assets/client/styles/main.css.map
+main.css
+main.css.map

@@ -1,4 +1,4 @@
-@use '../helpers' as *;
+@use "../helpers" as *;
 
 .header {
   position: sticky;
@@ -15,32 +15,9 @@
     }
   }
 
-  &__promo {
-    padding-block: rem(20);
-    text-align: center;
-    background-color: var(--color-dark);
-    border-bottom: var(--border);
-
-    @include mobile {
-      padding-block: rem(14);
-    }
-
-    @include mobile-s {
-      font-size: rem(12);
-    }
-
-    &-link {
-      .icon {
-        @include mobile-s {
-          column-gap: rem(5);
-        }
-      }
-    }
-  }
-
   &__body {
-    padding-block: rem(24);
-    background-color: var(--color-dark-10);
+    padding-block: 12px;
+    background-color: transparent;
 
     @include mobile {
       padding-block: rem(20);

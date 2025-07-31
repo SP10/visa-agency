@@ -1,18 +1,25 @@
 @use "../helpers" as *;
 
 .c-quick-filters {
+  position: relative;
+  display: flex;
+
   &__list {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 800px;
     gap: 12px;
+
     @include mobile {
-      max-width: 100%;
+      margin: 0 auto;
       flex-wrap: nowrap;
-      overflow: scroll;
+      overflow-x: auto;
+      justify-content: flex-start;
+      max-width: none;
     }
   }
+
   &__item {
     display: flex;
     gap: 8px;
@@ -25,10 +32,17 @@
     font-weight: 600;
     line-height: 24px;
     color: #1b1b24;
+    white-space: nowrap;
+
     &:hover {
       border: 1px solid #a5bacf;
       background-color: #f1f6fa;
     }
+
+    img {
+      max-width: none;
+    }
+
     @include mobile {
       padding: 4px 10px 4px 4px;
       gap: 6px;

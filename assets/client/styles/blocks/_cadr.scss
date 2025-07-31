@@ -1,34 +1,69 @@
-.card {
-  .card-body img {
-    position: static;
-    transform: none;
-    border-radius: 16px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  position: relative;
-  .card-info {
-    background: linear-gradient(
-      180deg,
-      rgba(24, 27, 31, 0) 0%,
-      rgba(24, 27, 31, 0.8) 69.77%
-    );
-    border-radius: 16px;
-    position: absolute;
-    bottom: 0;
-    padding: 32px;
-    color: #fff;
-    &__title {
-      color: var(--color-light);
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 32px;
-      letter-spacing: -0.24px;
+.row {
+  display: flex;
+  margin-top: 56px;
+  .card {
+    margin-right: 32px;
+    .card-body img {
+      position: static;
+      transform: none;
+      border-radius: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
     }
-    &__subtitle {
-      color: var(--color-light);
+    position: relative;
+    .card-info {
+      background: linear-gradient(
+        180deg,
+        rgba(24, 27, 31, 0) 0%,
+        rgba(24, 27, 31, 0.8) 69.77%
+      );
+      border-radius: 16px;
+      position: absolute;
+      bottom: 0;
+      padding: 32px;
+      color: #fff;
+      &__title {
+        color: var(--color-light);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: -0.24px;
+      }
+      &__subtitle {
+        color: var(--color-light);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+      }
+    }
+  }
+
+  .card-description-vacancies {
+    &__paragraph {
+      color: #8e8da4;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      text-transform: uppercase;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__item {
+      display: flex;
+      border-radius: 16px;
+      border: 1px solid rgba(37, 40, 44, 0.08);
+      color: #000;
       font-size: 18px;
       font-weight: 500;
-      line-height: 26px;
+      line-height: 24px;
+      span {
+        color: #8e8da4;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0.16px;
+      }
     }
   }
 }

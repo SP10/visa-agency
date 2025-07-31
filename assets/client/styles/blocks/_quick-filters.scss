@@ -1,0 +1,40 @@
+@use "../helpers" as *;
+
+.c-quick-filters {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    gap: 12px;
+    @include mobile {
+      max-width: 100%;
+      flex-wrap: nowrap;
+      overflow: scroll;
+    }
+  }
+  &__item {
+    display: flex;
+    gap: 8px;
+    padding: 4px 10px 4px 4px;
+    align-items: center;
+    border-radius: 48px;
+    border: 1px solid #d0d9e3;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #1b1b24;
+    &:hover {
+      border: 1px solid #a5bacf;
+      background-color: #f1f6fa;
+    }
+    @include mobile {
+      padding: 4px 10px 4px 4px;
+      gap: 6px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+    }
+  }
+}

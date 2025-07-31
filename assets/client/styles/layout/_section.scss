@@ -1,0 +1,11 @@
+.l-section {
+  display: flex;
+  &__header {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.64px;
+    margin-bottom: 24px;
+  }
+}

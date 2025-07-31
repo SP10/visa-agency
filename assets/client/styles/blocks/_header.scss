@@ -99,11 +99,11 @@
 
     .dropdown {
       position: absolute;
-      display: none;
+      display: none; //flex zone
       align-items: center;
       border-radius: 24px;
       background: var(--color-light);
-      border: 1px solid rgba(37, 40, 44, 0.10);
+      border: 1px solid rgba(37, 40, 44, 0.1);
       box-shadow: 8px 24px 40px 0 rgba(8, 8, 34, 0.08);
 
       .dropdown__list {
@@ -129,7 +129,7 @@
     }
 
     .dropdown__toggle {
-      &:hover .icon{
+      &:hover .icon {
         transform: rotate(180deg);
       }
     }

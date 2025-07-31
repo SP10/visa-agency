@@ -887,7 +887,7 @@ button[aria-label]::before {
 }
 .header__body {
   padding-block: 12px;
-  background-color: transparent;
+  background-color: var(--color-light);
 }
 @media (width <= 767.98px) {
   .header__body {

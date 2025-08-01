@@ -1,0 +1,158 @@
+// 📦 SCSS Grid System
+@use "./helpers/media" as *;
+
+// --- VARIABLES ---
+$grid-columns: 12;
+$gap-values: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem
+);
+
+// --- CONTAINER ---
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+// --- ROW ---
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: calc(-1 * var(--gutter-x, 1.5rem) * 0.5);
+  margin-block-start: calc(-1 * var(--gutter-y, 0) * 1);
+
+  > * {
+    padding-inline: calc(var(--gutter-x, 1.5rem) * 0.5);
+    margin-block-start: var(--gutter-y, 0);
+    flex-shrink: 0;
+    width: 100%;
+  }
+}
+
+// --- COLUMNS ---
+.col {
+  flex: 1 0 0%;
+}
+
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    flex: 0 0 percentage($i / $grid-columns);
+    max-width: percentage($i / $grid-columns);
+  }
+}
+
+@include laptop {
+  @for $i from 1 through $grid-columns {
+    .col-lg-#{$i} {
+      flex: 0 0 percentage($i / $grid-columns);
+      max-width: percentage($i / $grid-columns);
+    }
+  }
+}
+
+@include tablet {
+  @for $i from 1 through $grid-columns {
+    .col-md-#{$i} {
+      flex: 0 0 percentage($i / $grid-columns);
+      max-width: percentage($i / $grid-columns);
+    }
+  }
+}
+
+@include mobile {
+  @for $i from 1 through $grid-columns {
+    .col-sm-#{$i} {
+      flex: 0 0 percentage($i / $grid-columns);
+      max-width: percentage($i / $grid-columns);
+    }
+  }
+}
+
+@include mobile-s {
+  @for $i from 1 through $grid-columns {
+    .col-xs-#{$i} {
+      flex: 0 0 percentage($i / $grid-columns);
+      max-width: percentage($i / $grid-columns);
+    }
+  }
+}
+
+// --- OFFSETS ---
+@for $i from 1 through ($grid-columns - 1) {
+  .offset-#{$i} {
+    margin-left: percentage($i / $grid-columns);
+  }
+}
+
+@include laptop {
+  @for $i from 1 through ($grid-columns - 1) {
+    .offset-lg-#{$i} {
+      margin-left: percentage($i / $grid-columns);
+    }
+  }
+}
+
+@include tablet {
+  @for $i from 1 through ($grid-columns - 1) {
+    .offset-md-#{$i} {
+      margin-left: percentage($i / $grid-columns);
+    }
+  }
+}
+
+@include mobile {
+  @for $i from 1 through ($grid-columns - 1) {
+    .offset-sm-#{$i} {
+      margin-left: percentage($i / $grid-columns);
+    }
+  }
+}
+
+@include mobile-s {
+  @for $i from 1 through ($grid-columns - 1) {
+    .offset-xs-#{$i} {
+      margin-left: percentage($i / $grid-columns);
+    }
+  }
+}
+
+// --- ALIGNMENT ---
+.align-items-start    { align-items: flex-start !important; }
+.align-items-center   { align-items: center !important; }
+.align-items-end      { align-items: flex-end !important; }
+
+.justify-content-start     { justify-content: flex-start !important; }
+.justify-content-center    { justify-content: center !important; }
+.justify-content-end       { justify-content: flex-end !important; }
+.justify-content-between   { justify-content: space-between !important; }
+.justify-content-around    { justify-content: space-around !important; }
+
+// --- ROW COLS ---
+@for $i from 1 through $grid-columns {
+  .row-cols-#{$i} > * {
+    flex: 0 0 auto;
+    width: calc(100% / #{$i});
+  }
+}
+
+// --- GAP UTILS ---
+@each $key, $val in $gap-values {
+  .g-#{$key} {
+    --gutter-x: #{$val};
+    --gutter-y: #{$val};
+  }
+
+  .gx-#{$key} {
+    --gutter-x: #{$val};
+  }
+
+  .gy-#{$key} {
+    --gutter-y: #{$val};
+  }
+}

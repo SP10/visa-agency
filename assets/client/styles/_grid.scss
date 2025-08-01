@@ -156,3 +156,93 @@ $gap-values: (
     --gutter-y: #{$val};
   }
 }
+
+@include laptop-above {
+  // --- COLUMNS ---
+  @for $i from 1 through $grid-columns {
+    .col-xl-#{$i} {
+      flex: 0 0 percentage($i / $grid-columns);
+      max-width: percentage($i / $grid-columns);
+    }
+  }
+
+  // --- OFFSETS ---
+  @for $i from 1 through ($grid-columns - 1) {
+    .offset-xl-#{$i} {
+      margin-left: percentage($i / $grid-columns);
+    }
+  }
+
+  // --- ROW COLS ---
+  @for $i from 1 through $grid-columns {
+    .row-cols-xl-#{$i} > * {
+      flex: 0 0 auto;
+      width: calc(100% / #{$i});
+    }
+  }
+}
+
+// --- ORDER UTILS ---
+@for $i from 0 through $grid-columns {
+  .order-#{$i} {
+    order: $i !important;
+  }
+}
+
+.order-first {
+  order: -1 !important;
+}
+
+.order-last {
+  order: 9999 !important;
+}
+
+@include mobile-s {
+  @for $i from 0 through $grid-columns {
+    .order-xs-#{$i} {
+      order: $i !important;
+    }
+  }
+  .order-xs-first { order: -1 !important; }
+  .order-xs-last  { order: 9999 !important; }
+}
+
+@include mobile {
+  @for $i from 0 through $grid-columns {
+    .order-sm-#{$i} {
+      order: $i !important;
+    }
+  }
+  .order-sm-first { order: -1 !important; }
+  .order-sm-last  { order: 9999 !important; }
+}
+
+@include tablet {
+  @for $i from 0 through $grid-columns {
+    .order-md-#{$i} {
+      order: $i !important;
+    }
+  }
+  .order-md-first { order: -1 !important; }
+  .order-md-last  { order: 9999 !important; }
+}
+
+@include laptop {
+  @for $i from 0 through $grid-columns {
+    .order-lg-#{$i} {
+      order: $i !important;
+    }
+  }
+  .order-lg-first { order: -1 !important; }
+  .order-lg-last  { order: 9999 !important; }
+}
+
+@include laptop-above {
+  @for $i from 0 through $grid-columns {
+    .order-xl-#{$i} {
+      order: $i !important;
+    }
+  }
+  .order-xl-first { order: -1 !important; }
+  .order-xl-last  { order: 9999 !important; }
+}

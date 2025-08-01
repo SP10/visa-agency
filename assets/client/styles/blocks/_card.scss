@@ -1,0 +1,89 @@
+@use "./../helpers/media" as *;
+
+.card {
+  position: relative;
+
+  .card-body img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    @include mobile-s {
+      max-height: 160px;
+    }
+  }
+
+  .card-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    color: var(--text-white);
+    background: linear-gradient(180deg,
+        rgba(24, 27, 31, 0) 0%,
+        rgba(24, 27, 31, 0.8) 69.77%);
+    border-radius: 16px;
+
+    &__title {
+      color: var(--text-white);
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+      letter-spacing: -0.24px;
+
+      @include mobile-s {
+        font-size: 18px;
+      }
+    }
+
+    &__subtitle {
+      color: var(--text-white);
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+
+      @include mobile-s {
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.14px;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+.card-description-vacancies {
+  &__paragraph {
+    color: #8e8da4;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    border-radius: 16px;
+    border: 1px solid rgba(37, 40, 44, 0.08);
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+
+    span {
+      color: #8e8da4;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0.16px;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 @use "../helpers" as *;
 
 .quick-filter-container {
+  margin-bottom: 56px;
   @include mobile {
     overflow: hidden;
   }
@@ -57,13 +58,9 @@
       border: 1px solid #A0A8B1;
     }
 
-    .active {
+    &.active {
       border: 1px solid #a5bacf;
       background-color: #f1f6fa;
-    }
-
-    img {
-      max-width: none;
     }
 
     @include mobile {

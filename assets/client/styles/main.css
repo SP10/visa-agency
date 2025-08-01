@@ -335,10 +335,13 @@ svg * {
   --color-dark-40: #666666;
   --color-grey:#A6A6AF;
   --color-grey-10: #A6A6AF1A;
+  --color-grey-30: #8E8DA4;
   --color-gray-50: #7e7e81;
   --color-gray-60: #98989a;
   --color-accent: #ffd11a;
   --color-red: #ff5500;
+  --color-green: #318633;
+  --color-green-10: #EBF8DF;
   --font-family-base: "Urbanist", sans-serif;
   --font-family-accent: "Urbanist", sans-serif;
   --text-primary: #000;
@@ -3759,6 +3762,37 @@ button[aria-label]::before {
   border-bottom: var(--border);
 }
 
+.vacancies__header {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  /* 133.333% */
+  letter-spacing: -0.24px;
+  margin-bottom: 24px;
+}
+.vacancies__section {
+  margin-bottom: 32px;
+}
+.vacancies__subtitle {
+  color: var(--color-grey-30);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  /* 133.333% */
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.vacancies__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media (width <= 479.98px) {
+  .vacancies__list {
+    grid-template-columns: 1fr;
+  }
+}
+
 .quick-filter-container {
   margin-bottom: 56px;
 }
@@ -3895,33 +3929,44 @@ button[aria-label]::before {
     line-height: 18px;
   }
 }
-
-.card-description-vacancies__paragraph {
-  color: #8e8da4;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 16px;
-  text-transform: uppercase;
-}
-.card-description-vacancies__list {
-  display: flex;
-  flex-wrap: wrap;
-}
-.card-description-vacancies__item {
-  display: flex;
+.card-vacancies {
   border-radius: 16px;
   border: 1px solid rgba(37, 40, 44, 0.08);
-  color: #000;
+  background: #FFF;
+}
+.card-vacancies__body {
+  display: flex;
+  column-gap: 12px;
+  padding: 12px;
+}
+.card-vacancies__body .card-image {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.card-vacancies__body .card-content__title {
   font-size: 18px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 24px; /* 133.333% */
 }
-.card-description-vacancies__item span {
-  color: #8e8da4;
+.card-vacancies__body .card-content__title.m-cost {
+  color: var(--color-green);
+  font-weight: 700;
+}
+.card-vacancies__body .card-content__description {
+  color: var(--color-grey-30);
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
+  /* 137.5% */
   letter-spacing: 0.16px;
+}
+.card-vacancies__body .card-content__description.m-cost {
+  color: var(--color-green);
+}
+.card-vacancies.m-cost {
+  background-color: var(--color-green-10);
 }
 
 .info {

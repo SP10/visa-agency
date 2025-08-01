@@ -53,37 +53,53 @@
       }
     }
   }
-}
 
-.card-description-vacancies {
-  &__paragraph {
-    color: #8e8da4;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 16px;
-    text-transform: uppercase;
-  }
-
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &__item {
-    display: flex;
+  &-vacancies {
     border-radius: 16px;
     border: 1px solid rgba(37, 40, 44, 0.08);
-    color: #000;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 24px;
+    background: #FFF;
 
-    span {
-      color: #8e8da4;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 22px;
-      letter-spacing: 0.16px;
+    &__body {
+      display: flex;
+      column-gap: 12px;
+      padding: 12px;
+
+      .card-image {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .card-content {
+        &__title {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 24px; /* 133.333% */
+
+          &.m-cost {
+            color: var(--color-green);
+            font-weight: 700;
+          }
+        }
+
+        &__description {
+          color: var(--color-grey-30);
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22px;
+          /* 137.5% */
+          letter-spacing: 0.16px;
+
+          &.m-cost {
+            color: var(--color-green);
+          }
+        }
+      }
+    }
+
+    &.m-cost {
+      background-color: var(--color-green-10);
     }
   }
 }

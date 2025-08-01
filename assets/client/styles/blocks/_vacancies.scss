@@ -1,0 +1,36 @@
+@use "./../helpers/media" as *;
+
+.vacancies {
+    &__header {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        /* 133.333% */
+        letter-spacing: -0.24px;
+        margin-bottom: 24px;
+    }
+
+    &__section {
+        margin-bottom: 32px;
+    }
+
+    &__subtitle {
+        color: var(--color-grey-30);
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 16px;
+        /* 133.333% */
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+
+        @include mobile-s {
+            grid-template-columns: 1fr;
+        }
+    }
+}

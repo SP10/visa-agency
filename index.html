@@ -1,40 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta property="og:title" content="Viza Work Agency" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/сторінка" />
+    <meta property="og:image" content="/assets/static/images/OG.png" />
+    <title>Viza Work Agency</title>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/assets/client/styles/main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta property="og:title" content="Viza Work Agency" />
-  <meta property="og:description" content="" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://example.com/сторінка" />
-  <meta property="og:image" content="/assets/static/images/OG.png" />
-  <title>Viza Work Agency</title>
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
-  <link rel="manifest" href="/manifest.webmanifest" />
-  <link rel="stylesheet" href="/assets/client/styles/main.css" />
-</head>
+  <body>
+    <div include-html="/template/sprite.html"></div>
 
-<body> 
-  <div include-html="/template/sprite.html"></div>
+    <div include-html="/template/header.html"></div>
 
-  <div include-html="/template/header.html"></div>
+    <main>
+      <div include-html="/template/opportunities.html"></div>
+      <div include-html="/template/about-us.html"></div>
+      <!-- Add other content here -->
+    </main>
 
-  <main>
-    <div include-html="/template/opportunities.html"></div>
-    <!-- Add other content here -->
-  </main>
+    <div include-html="/template/footer.html"></div>
 
-  <div include-html="/template/footer.html"></div>  
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-  <script src="/assets/client/scripts/debug/dynamicComposer.js" type="module"></script>
-  <!-- <script src="/assets/client/scripts/Сarousel.js" type="module"></script> -->
-  <script src="/assets/client/scripts/main.js" type="module"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script
+      src="/assets/client/scripts/debug/dynamicComposer.js"
+      type="module"
+    ></script>
+    <!-- <script src="/assets/client/scripts/Сarousel.js" type="module"></script> -->
+    <script src="/assets/client/scripts/main.js" type="module"></script>
+  </body>
 </html>

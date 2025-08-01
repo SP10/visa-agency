@@ -1,90 +1,57 @@
-@use '../helpers' as *;
+@use "../helpers" as *;
 
 .about {
-  padding-block: fluid(120, 40);
-  background-color: var(--color-dark-10);
-
-  &__inner {
-    display: grid;
-    row-gap: fluid(100, 40);
-  }
-
-  &__header {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-areas:
-      'icon info'
-      'icon description';
-    align-items: center;
-    gap: rem(30) fluid(80, 20);
-
-    @include laptop {
-      row-gap: rem(20);
-    }
-
-    @include mobile {
-      grid-template-areas:
-        'icon subtitle'
-        'title title'
-        'description description';
-      row-gap: rem(4);
-    }
-  }
-
-  &__icon {
-    grid-area: icon;
-    width: fluid(150, 60);
-  }
-
-  &__info {
-    display: grid;
-    row-gap: rem(16);
-
-    @include laptop {
-      row-gap: rem(10);
-    }
-
-    @include mobile {
-      display: contents;
-    }
-  }
-
-  &__subtitle {
-    justify-self: start;
-
-    @include mobile {
-      grid-area: subtitle;
-    }
-  }
-
   &__title {
-    @include mobile {
-      grid-area: title;
-      margin-top: rem(20);
+    display: flex;
+    justify-content: center;
+    padding-top: 346px;
+    margin-bottom: 24px;
+    font-size: 24px;
+    opacity: 0.4;
+    font-weight: 500;
+    line-height: 32px;
+    @include mobile-s {
+      text-align: left;
+      justify-content: left;
+      margin-bottom: 16px;
+      font-size: 20px;
+      padding-top: 280px;
     }
   }
-
   &__description {
-    @include mobile {
-      grid-area: description;
+    @include tablet {
+      padding: 0 40px;
+      text-align: center;
+    }
+    @include mobile-s {
+      text-align: left;
+      padding: 0;
+      font-size: 36px;
+      line-height: 44px;
+      letter-spacing: -0.72px;
+    }
+    display: flex;
+    justify-content: center;
+    padding: 0 188px;
+    color: #c7c7c7;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: -0.96px;
+    text-align: center;
+    transition: color 1.5s ease-in;
+    &.active {
+      color: #000;
     }
   }
+}
 
-  &__list {
-    display: grid;
-    gap: rem(20);
-    padding: rem(20);
-    background-color: var(--color-dark);
-    border-radius: rem(12);
-
-    @include laptop {
-      gap: rem(10);
-      padding: rem(10);
-      border-radius: rem(10);
-    }
-
-    @include mobile-above {
-      grid-template-columns: repeat(3, 1fr);
-    }
+.m-about {
+  margin-top: 80px;
+  background-image: url("../../../../planet.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  @include mobile-s {
+    background-position: 65% 0;
   }
 }

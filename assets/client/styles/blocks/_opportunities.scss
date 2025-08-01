@@ -1,0 +1,108 @@
+@use "../helpers" as *;
+
+.info {
+  background-image: linear-gradient(
+      180deg,
+      rgba(242, 245, 247, 0) 80%,
+      #f2f5f7 100%
+    ),
+    url("../../../../docs1440.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  @include tablet {
+    background-image: linear-gradient(
+        180deg,
+        rgba(242, 245, 247, 0) 80%,
+        #f2f5f7 100%
+      ),
+      url("../../../../docs1024.png");
+  }
+
+  @include mobile {
+    background-image: url("../../../../docs768.png");
+  }
+
+  @include mobile-s {
+    background-image: linear-gradient(
+        180deg,
+        rgba(242, 245, 247, 0) 80%,
+        #f2f5f7 100%
+      ),
+      url("../../../../docs375.png");
+    background-position: 50% 85%;
+  }
+}
+
+.opportunities-content {
+  margin-top: 80px;
+
+  &__header-title {
+    text-align: center;
+    color: #000;
+    opacity: 40%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px; /* 130% */
+  }
+  .opportunities-content-info {
+    display: flex;
+    gap: 40px;
+    @include tablet {
+      gap: 32px;
+    }
+    @include mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    &__block {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &__title-about {
+      color: #000;
+      text-align: center;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+    }
+    &__subtitle-about {
+      color: #8e8da4;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0.16px;
+    }
+  }
+  .contact-info {
+    margin-top: 82px;
+    text-align: center;
+    &__header {
+      color: #000;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 26px; /* 130% */
+      letter-spacing: -0.4px;
+    }
+    &__description {
+      color: #858585;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px; /* 137.5% */
+      letter-spacing: 0.16px;
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+  .btn-info {
+    margin-top: 24px;
+    margin-bottom: 94px;
+  }
+}

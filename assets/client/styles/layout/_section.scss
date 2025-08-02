@@ -1,5 +1,6 @@
 .l-section {
   display: flex;
+  margin-top: 60px;
   &__header {
     text-align: center;
     font-size: 32px;
@@ -7,5 +8,8 @@
     line-height: 40px;
     letter-spacing: -0.64px;
     margin-bottom: 24px;
+    &.m-office {
+      margin-bottom: 60px;
+    }
   }
 }

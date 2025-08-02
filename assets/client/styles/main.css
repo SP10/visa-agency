@@ -1859,6 +1859,30 @@ button[aria-label]::before {
   font-size: 16px;
   font-weight: 700;
 }
+.button.m-showrell {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  column-gap: 10px;
+  margin: 16px;
+  align-items: center;
+  top: 0;
+  right: 0;
+  padding: 16px;
+  column-gap: 10px;
+  border-radius: 120px;
+  border: 1px solid rgba(49, 31, 2, 0.2);
+  background: #fff;
+  color: #301d00;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.16px;
+}
+.button.m-showrell .icon {
+  width: 20px;
+  height: 20px;
+}
 
 .burger-button {
   display: flex;
@@ -3878,6 +3902,7 @@ button[aria-label]::before {
 
 .l-section {
   display: flex;
+  margin-top: 60px;
 }
 .l-section__header {
   text-align: center;
@@ -3886,6 +3911,9 @@ button[aria-label]::before {
   line-height: 40px;
   letter-spacing: -0.64px;
   margin-bottom: 24px;
+}
+.l-section__header.m-office {
+  margin-bottom: 60px;
 }
 
 .card {
@@ -3947,7 +3975,7 @@ button[aria-label]::before {
 .card-vacancies {
   border-radius: 16px;
   border: 1px solid rgba(37, 40, 44, 0.08);
-  background: #FFF;
+  background: #fff;
 }
 .card-vacancies__body {
   display: flex;
@@ -3993,6 +4021,50 @@ button[aria-label]::before {
 }
 .card-vacancies.m-grey {
   background-color: var(--color-grey-20);
+}
+.card-offices__background {
+  position: static;
+  transform: none;
+  width: 100%;
+}
+.card-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 300px;
+  margin: 24px;
+  color: #414151;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -0.24px;
+}
+.card-badge__icon {
+  width: 24px !important;
+  height: 24px !important;
+}
+.card-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 16px;
+}
+.card-footer .m-location {
+  display: flex;
+  align-items: center;
+  color: #0e0e14;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  column-gap: 12px;
+}
+.card-footer .m-location__icon {
+  width: 24px !important;
+  height: 24px !important;
 }
 
 .info {

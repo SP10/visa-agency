@@ -22,9 +22,11 @@
     width: 100%;
     padding: 20px;
     color: var(--text-white);
-    background: linear-gradient(180deg,
-        rgba(24, 27, 31, 0) 0%,
-        rgba(24, 27, 31, 0.8) 69.77%);
+    background: linear-gradient(
+      180deg,
+      rgba(24, 27, 31, 0) 0%,
+      rgba(24, 27, 31, 0.8) 69.77%
+    );
     border-radius: 16px;
 
     &__title {
@@ -63,7 +65,7 @@
   &-vacancies {
     border-radius: 16px;
     border: 1px solid rgba(37, 40, 44, 0.08);
-    background: #FFF;
+    background: #fff;
 
     &__body {
       display: flex;
@@ -119,6 +121,53 @@
 
     &.m-grey {
       background-color: var(--color-grey-20);
+    }
+  }
+
+  &-offices {
+    &__background {
+      position: static;
+      transform: none;
+      width: 100%;
+    }
+  }
+  &-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 300px;
+    margin: 24px;
+    color: #414151;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: -0.24px;
+    &__icon {
+      width: 24px !important;
+      height: 24px !important;
+    }
+  }
+  &-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 16px;
+    .m-location {
+      display: flex;
+      align-items: center;
+      color: #0e0e14;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 26px;
+      column-gap: 12px;
+      &__icon {
+        width: 24px !important;
+        height: 24px !important;
+      }
     }
   }
 }

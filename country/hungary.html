@@ -25,14 +25,18 @@
   <div include-html="/template/header.html"></div>
 
   <main>
-    <div include-html="/template/country/germany.html"></div>
+    <swiper-container class="row c-swiper" data-carousel init="false">
+      <swiper-slide class="col-12">
+        <div include-html="/template/country/hungary.html"></div>
+      </swiper-slide>
+  </swiper-container>
   </main>
 
   <div include-html="/template/footer.html"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   <script src="/assets/client/scripts/debug/dynamicComposer.js" type="module"></script>
-  <!-- <script src="/assets/client/scripts/Сarousel.js" type="module"></script> -->
+  <script src="/assets/client/scripts/Сarousel.js" type="module"></script>
   <script src="/assets/client/scripts/main.js" type="module"></script>
 </body>
 

@@ -54,6 +54,12 @@
     }
   }
 
+  &.m-sticky {
+    position: sticky;
+    top: 85px;
+    z-index: 1;
+  }
+
   &-vacancies {
     border-radius: 16px;
     border: 1px solid rgba(37, 40, 44, 0.08);
@@ -75,11 +81,20 @@
         &__title {
           font-size: 18px;
           font-weight: 500;
-          line-height: 24px; /* 133.333% */
+          line-height: 24px;
+          /* 133.333% */
 
-          &.m-cost {
+          &.m-green {
             color: var(--color-green);
+            font-size: 16px;
             font-weight: 700;
+          }
+
+          &.m-grey {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22px;
+            letter-spacing: 0.16px;
           }
         }
 
@@ -91,15 +106,19 @@
           /* 137.5% */
           letter-spacing: 0.16px;
 
-          &.m-cost {
+          &.m-green {
             color: var(--color-green);
           }
         }
       }
     }
 
-    &.m-cost {
+    &.m-green {
       background-color: var(--color-green-10);
+    }
+
+    &.m-grey {
+      background-color: var(--color-grey-20);
     }
   }
 }

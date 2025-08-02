@@ -335,6 +335,7 @@ svg * {
   --color-dark-40: #666666;
   --color-grey:#A6A6AF;
   --color-grey-10: #A6A6AF1A;
+  --color-grey-20: #F7F7F7;
   --color-grey-30: #8E8DA4;
   --color-gray-50: #7e7e81;
   --color-gray-60: #98989a;
@@ -3762,6 +3763,9 @@ button[aria-label]::before {
   border-bottom: var(--border);
 }
 
+.vacancies {
+  margin: 24px 0;
+}
 .vacancies__header {
   font-size: 24px;
   font-weight: 700;
@@ -3791,6 +3795,12 @@ button[aria-label]::before {
   .vacancies__list {
     grid-template-columns: 1fr;
   }
+}
+
+.c-swiper {
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-theme-color: #568CF3;
+  --swiper-pagination-bullet-horizontal-gap: 10px;
 }
 
 .quick-filter-container {
@@ -3929,6 +3939,11 @@ button[aria-label]::before {
     line-height: 18px;
   }
 }
+.card.m-sticky {
+  position: sticky;
+  top: 85px;
+  z-index: 1;
+}
 .card-vacancies {
   border-radius: 16px;
   border: 1px solid rgba(37, 40, 44, 0.08);
@@ -3948,11 +3963,19 @@ button[aria-label]::before {
 .card-vacancies__body .card-content__title {
   font-size: 18px;
   font-weight: 500;
-  line-height: 24px; /* 133.333% */
+  line-height: 24px;
+  /* 133.333% */
 }
-.card-vacancies__body .card-content__title.m-cost {
+.card-vacancies__body .card-content__title.m-green {
   color: var(--color-green);
+  font-size: 16px;
   font-weight: 700;
+}
+.card-vacancies__body .card-content__title.m-grey {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.16px;
 }
 .card-vacancies__body .card-content__description {
   color: var(--color-grey-30);
@@ -3962,11 +3985,14 @@ button[aria-label]::before {
   /* 137.5% */
   letter-spacing: 0.16px;
 }
-.card-vacancies__body .card-content__description.m-cost {
+.card-vacancies__body .card-content__description.m-green {
   color: var(--color-green);
 }
-.card-vacancies.m-cost {
+.card-vacancies.m-green {
   background-color: var(--color-green-10);
+}
+.card-vacancies.m-grey {
+  background-color: var(--color-grey-20);
 }
 
 .info {

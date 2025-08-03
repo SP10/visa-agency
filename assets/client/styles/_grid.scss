@@ -9,7 +9,7 @@ $gap-values: (
   2: 0.5rem,
   3: 1rem,
   4: 1.5rem,
-  5: 3rem
+  5: 3rem,
 );
 
 // --- CONTAINER ---
@@ -32,6 +32,11 @@ $gap-values: (
     margin-block-start: var(--gutter-y, 0);
     flex-shrink: 0;
     width: 100%;
+  }
+  &.m-managers-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
   }
 }
 
@@ -123,15 +128,31 @@ $gap-values: (
 }
 
 // --- ALIGNMENT ---
-.align-items-start    { align-items: flex-start !important; }
-.align-items-center   { align-items: center !important; }
-.align-items-end      { align-items: flex-end !important; }
+.align-items-start {
+  align-items: flex-start !important;
+}
+.align-items-center {
+  align-items: center !important;
+}
+.align-items-end {
+  align-items: flex-end !important;
+}
 
-.justify-content-start     { justify-content: flex-start !important; }
-.justify-content-center    { justify-content: center !important; }
-.justify-content-end       { justify-content: flex-end !important; }
-.justify-content-between   { justify-content: space-between !important; }
-.justify-content-around    { justify-content: space-around !important; }
+.justify-content-start {
+  justify-content: flex-start !important;
+}
+.justify-content-center {
+  justify-content: center !important;
+}
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+.justify-content-between {
+  justify-content: space-between !important;
+}
+.justify-content-around {
+  justify-content: space-around !important;
+}
 
 // --- ROW COLS ---
 @for $i from 1 through $grid-columns {
@@ -203,8 +224,12 @@ $gap-values: (
       order: $i !important;
     }
   }
-  .order-xs-first { order: -1 !important; }
-  .order-xs-last  { order: 9999 !important; }
+  .order-xs-first {
+    order: -1 !important;
+  }
+  .order-xs-last {
+    order: 9999 !important;
+  }
 }
 
 @include mobile {
@@ -213,8 +238,12 @@ $gap-values: (
       order: $i !important;
     }
   }
-  .order-sm-first { order: -1 !important; }
-  .order-sm-last  { order: 9999 !important; }
+  .order-sm-first {
+    order: -1 !important;
+  }
+  .order-sm-last {
+    order: 9999 !important;
+  }
 }
 
 @include tablet {
@@ -223,8 +252,12 @@ $gap-values: (
       order: $i !important;
     }
   }
-  .order-md-first { order: -1 !important; }
-  .order-md-last  { order: 9999 !important; }
+  .order-md-first {
+    order: -1 !important;
+  }
+  .order-md-last {
+    order: 9999 !important;
+  }
 }
 
 @include laptop {
@@ -233,8 +266,12 @@ $gap-values: (
       order: $i !important;
     }
   }
-  .order-lg-first { order: -1 !important; }
-  .order-lg-last  { order: 9999 !important; }
+  .order-lg-first {
+    order: -1 !important;
+  }
+  .order-lg-last {
+    order: 9999 !important;
+  }
 }
 
 @include laptop-above {
@@ -243,6 +280,10 @@ $gap-values: (
       order: $i !important;
     }
   }
-  .order-xl-first { order: -1 !important; }
-  .order-xl-last  { order: 9999 !important; }
+  .order-xl-first {
+    order: -1 !important;
+  }
+  .order-xl-last {
+    order: 9999 !important;
+  }
 }

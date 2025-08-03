@@ -170,4 +170,46 @@
       }
     }
   }
+
+  .m-managers {
+    &__grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__grid-mobile {
+      display: flex;
+    }
+  }
+
+  &-managers {
+    margin-top: 50px;
+    min-width: 290px;
+    &__img {
+      border: none !important;
+      width: 24px !important;
+      height: 24px !important;
+    }
+    &__title {
+      margin-top: 8px;
+      color: #000;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+      @include tablet {
+        text-align: center;
+      }
+    }
+    &__subtitle {
+      text-align: center;
+      color: #8e8da4;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0.16px;
+      @include tablet {
+        text-align: center;
+      }
+    }
+  }
 }
